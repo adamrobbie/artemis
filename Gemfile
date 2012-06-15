@@ -37,6 +37,8 @@ group :test do
   gem "cucumber-rails", ">= 1.3.0", :require => false
   gem "capybara", ">= 1.1.2"
   gem "launchy", ">= 2.1.0"
+  gem 'simplecov', :require => false
+  gem 'rails_best_practices', '~> 1.9.1'
 end
 
 gem 'jquery-rails'
@@ -44,3 +46,7 @@ gem "bson_ext", ">= 1.6.4"
 gem "mongoid", ">= 2.4.11"
 gem "devise", ">= 2.1.0"
 gem "bootstrap-sass", ">= 2.0.3"
+gem 'mongoid_acts_as_list', '~> 0.0.5'
+gem "omniauth-facebook", '~> 1.3.0'
+gem 'omniauth-openid', '~> 1.0.1'
+gem 'omniauth-twitter', '~> 0.0.11'
