@@ -2,11 +2,12 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @users = User.all
+  	@user = current_user
+  	@document = Document.new
+  	@documents = current_user.documents.asc(:position)
   end
-
-  def show
-    @user = User.find(params[:id])
+  def create
   end
-
+  def destroy
+  end
 end
