@@ -4,7 +4,7 @@ class User
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   ## Database authenticatable
   field :email,              :type => String, :null => false, :default => ""
@@ -42,4 +42,31 @@ class User
   field :name
   validates_presence_of :name
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+
+  embeds_many :documents
+
+  def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
+  data = access_token.extra.raw_info
+  if user = self.where(email: data.email).first
+    user
+  else # Create a user with a stub password.
+    self.create(:email => data.email, :password => Devise.friendly_token[0,20])
+  end
+end
+def self.find_for_open_id(access_token, signed_in_resource=nil)
+  data = access_token.info
+  if user = User.where(:email => data["email"]).first
+    user
+  else
+    User.create!(:email => data["email"], :password => Devise.friendly_token[0,20])
+  end
+end
+def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
+  data = access_token.extra.raw_info
+  if user = User.where(:username => data.screen_name).first
+        user
+    else
+        User.create!(:email => "#{data.screen_name}@foo.bar", :username => data.screen_name, :password => Devise.friendly_token)
+    end
+end
 end
