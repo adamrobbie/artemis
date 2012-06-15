@@ -1,9 +1,23 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.name, user %> signed up <%= user.created_at.to_date %>
-    </li>
-  <% end %>
-</ul>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="content">
+        <%= form_for Document.new, remote: true do |f| %>
+        <%= f.text_field :title, placeholder: "Create a note.." %><%= f.submit %>
+        <% end %>
+
+        <div class="notes">
+          <div id="documentform" style="display:none"></div>
+          <ul id="documents" data-update-url="<%= sort_documents_url %>">
+            <% @documents.each do |document| %>
+            <%= content_tag_for :li, document do %>
+            <%= render document %>
+            <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,4 +1,33 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<!-- <div class="row-fluid">
+	<div class="span12"> -->
+			<h1>Artemis</h1>
+				<p>
+				<h3>Built to be <strong>beautiful. </strong>
+					Built to be <strong>capable. </strong><br /></h3>
+				<span>your thoughts, your ideas</span><br />
+						<a class="btn btn-large btn-primary" data-toggle="modal" href="#signUpModal" >Sign Up</a>
+						<a class="btn btn-large btn-success" data-toggle="modal" href="#signInModal" >Sign In</a>
+						<%= link_to "Experience the Demo", demo_path,
+							class: "btn btn-large" %>
+						<div class="modal hide" id="signUpModal">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">×</button>
+							</div>
+							<div class="modal-body">
+								<p><%= render 'devise/registrations/new' %></p>
+							</div>
+						</div>
+						<div class="modal hide" id="signInModal">
+							<div class="modal-header">
+								<button type"button" class="close" data-dismiss="modal">×</button>
+							</div>
+							<div class="modal-body">
+								<p><%= render 'devise/sessions/new' %></p>
+							</div>
+						</div>
+				</div>
+				</p>
+		</div>
+<!-- 	</div>
+</div> -->
+

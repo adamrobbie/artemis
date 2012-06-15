@@ -1,0 +1,13 @@
+$("#documentform").dialog({
+  autoOpen: true,
+  position: "top",
+  width: 450,
+  modal: true,
+  closeOnEscape: true,
+  beforeClose: function() {
+      $('#edit_<%= dom_id(@document) %>').submit()
+  },
+  open: function() {
+    $("#documentform").html("<%= escape_javascript(render('documents/edit')) %>")
+  },
+});

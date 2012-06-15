@@ -203,8 +203,12 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-
+require "omniauth-facebook"
+  config.omniauth :facebook, "220098901385314", "4cd3cb3ddec917fdc30d13557881e183",
+  {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  require 'openid/store/filesystem'
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
+  config.omniauth :twitter, "aFAwwbm2uNNfONGGOBug", "3P25ymCI2Uw4KvFzJrGgJUkk86fhshcz0XgdeRBGBk"
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
