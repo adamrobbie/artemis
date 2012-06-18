@@ -131,7 +131,7 @@ p {
 /* footer */
 
 footer {
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: 0;
   color: $white;
@@ -249,4 +249,6 @@ footer {
       width: 450px;
     }
   }
-
+#newnotebutton {
+  text-align: center;
+}

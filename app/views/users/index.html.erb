@@ -2,12 +2,14 @@
   <div class="row-fluid">
     <div class="span12">
       <div class="content">
-        <%= form_for Document.new, remote: true do |f| %>
-        <%= f.text_field :title, placeholder: "Create a note.." %><%= f.submit %>
-        <% end %>
+        <div id="newnotebutton">
+                <%= link_to Document.new, method: :post, remote: true do %>
+                <button class="btn btn-primary">NEW NOTE</button>
+                <% end %>
+        </div>
+        <div id="documentform" style="display:none"></div>
 
         <div class="notes">
-          <div id="documentform" style="display:none"></div>
           <ul id="documents" data-update-url="<%= sort_documents_url %>">
             <% @documents.each do |document| %>
             <%= content_tag_for :li, document do %>

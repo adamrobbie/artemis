@@ -1,8 +1,7 @@
  <%= link_to edit_document_path(document), remote: true do %>
-  <h4><%= document.title %></h4>
-   <p><small>
+   <p><h4>
   	<%= sanitize truncate(document.content, length: 140) %>
-  	</small></p>
+  	</h4></p>
  <% end %>
  <span><%= link_to document, method: :delete, remote: true  do %>
    <i class="icon-remove-sign"></i>
