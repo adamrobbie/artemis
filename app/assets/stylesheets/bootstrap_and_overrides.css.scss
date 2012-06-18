@@ -2,7 +2,14 @@
 $iconSpritePath: asset-url('glyphicons-halflings.png', image);
 $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 @import "bootstrap";
- body { background-color: #000; }
+ // body { background: image-url('woodbg150.png') repeat-x}
+ body {
+  background: url('woodbg150.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 @import "bootstrap-responsive";
 
 
@@ -123,9 +130,12 @@ p {
 /* footer */
 
 footer {
-  color: $grayLight;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: $white;
   padding: 5px;
-  small {
+  h2 {
     padding: 10px auto;
   }
   a {
