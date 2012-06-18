@@ -81,6 +81,7 @@ $document-color-yellow: #FFF08C;
 
 
 header {
+  height: 60px;
   #logo {
     @include site-logo;
   }
@@ -176,13 +177,14 @@ footer {
  // background: radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
  // background-size: 1px 10px, 10px 10px, 100% 100%;
  // background-position: 1px 1px, 0px 0px, center center;
- // -webkit-border-radius: 6px 6px 6px 6px;
- // -moz-border-radius: 6px 6px 6px 6px;
- // border-radius: 6px 6px 6px 6px;
- // -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
- // -moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
- // box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
-  margin: 10px, -10px; /* negative indent the amount of the padding to maintain the grid system */
+ -webkit-border-radius: 10px 10px 10px 10px;
+ -moz-border-radius: 10px 8px 8px 8px;
+ border-radius: 10px 10px 10px 10px;
+ -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
+ -moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
+ box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
+  background-color: rgba(0,0,0,0.2);
+  margin: 10px, -60px; /* negative indent the amount of the padding to maintain the grid system */
   padding: 10px;
   top: 10px;
 
