@@ -1,0 +1,16 @@
+<div id="toolbar">
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <form class="navbar-search">
+          <input type="text" class="search-query" placeholder="Search">
+      </form>
+          <div id="newnotebutton">
+            <%= link_to Document.new, method: :post, remote: true do %>
+            <button class="btn btn-primary pull-right">NEW NOTE</button>
+            <% end %>
+          </div>
+    </div>
+  </div>
+</div>
+</div>

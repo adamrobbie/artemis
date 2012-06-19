@@ -81,7 +81,7 @@ $document-color-yellow: #FFF08C;
 
 
 header {
-  height: 60px;
+  height: 40px;
   #logo {
     @include site-logo;
   }
@@ -166,7 +166,14 @@ footer {
 
 }
 
-
+  // #toolbar { background-color: $black; }
+  // #toolbar {
+  //   margin: 0;
+  //  padding: 0px, 10%;
+  // bottom: 0;}
+  // #toolbar ul { margin: 0; padding: 0; list-style-type: none; }
+  // #toolbar ul li { display: inline; }
+  // #toolbar ul li a { text-decoration: none; }
 
 
 .content {
@@ -184,9 +191,14 @@ footer {
  -moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
  box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
   background-color: rgba(0,0,0,0.2);
-  margin: 10px, -60px; /* negative indent the amount of the padding to maintain the grid system */
-  padding: 10px;
-  top: 10px;
+  margin: 0px, -60px; /* negative indent the amount of the padding to maintain the grid system */
+  // padding: 0px, 10%;
+  // top: 0;
+  #toolbar {
+    .navbar {
+      margin: 0;
+      }}
+
 
  ul, li {
   list-style: none; }
@@ -249,6 +261,3 @@ footer {
       width: 450px;
     }
   }
-#newnotebutton {
-  text-align: center;
-}
