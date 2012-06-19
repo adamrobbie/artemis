@@ -2,7 +2,6 @@
 $iconSpritePath: asset-url('glyphicons-halflings.png', image);
 $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 @import "bootstrap";
- // body { background: image-url('woodbg150.png') repeat-x}
  body {
   background: url('woodbg150.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -194,11 +193,20 @@ footer {
   margin: 0px, -60px; /* negative indent the amount of the padding to maintain the grid system */
   // padding: 0px, 10%;
   // top: 0;
-  #toolbar {
-    .navbar {
-      margin: 0;
-      }}
-
+.navbar {
+  overflow: hidden;
+}
+  .navbar-inner {
+  background-color: transparent; /* background color will be black for all browsers */
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
 
  ul, li {
   list-style: none; }
