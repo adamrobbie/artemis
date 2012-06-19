@@ -27,7 +27,6 @@ group :development do
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-rspec", ">= 0.4.3"
   gem "guard-cucumber", ">= 0.6.1"
-  gem "rails-footnotes", ">= 3.7"
 end
 
 group :test do

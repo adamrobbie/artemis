@@ -200,8 +200,6 @@ GEM
       activesupport (= 3.2.3)
       bundler (~> 1.0)
       railties (= 3.2.3)
-    rails-footnotes (3.7.8)
-      rails (>= 3.0.0)
     rails_best_practices (1.9.1)
       activesupport
       awesome_print
@@ -312,7 +310,6 @@ DEPENDENCIES
   omniauth-openid (~> 1.0.1)
   omniauth-twitter (~> 0.0.11)
   rails (= 3.2.3)
-  rails-footnotes (>= 3.7)
   rails_best_practices (~> 1.9.1)
   rb-fsevent
   rspec-rails (>= 2.10.1)

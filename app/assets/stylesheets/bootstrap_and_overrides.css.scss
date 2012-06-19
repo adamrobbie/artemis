@@ -2,6 +2,7 @@
 $iconSpritePath: asset-url('glyphicons-halflings.png', image);
 $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 @import "bootstrap";
+@import "bootstrap-responsive";
  body {
   background: url('woodbg150.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -9,8 +10,6 @@ $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
   -o-background-size: cover;
   background-size: cover;
 }
-@import "bootstrap-responsive";
-
 
 $grayMediumLight: #eaeaea;
 $white: #fff;
@@ -127,62 +126,8 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-/* footer */
-
-footer {
-  position: relative;
-  width: 100%;
-  bottom: 0;
-  color: $white;
-  padding: 5px;
-  h2 {
-    padding: 10px auto;
-  }
-  a {
-    color: $white;
-    text-decoration: none;
-    &:hover {
-      color: $grayLight;
-    }
-  }
-  ul {
-    float: right;
-    list-style: none;
-    margin-right: 10%;
-    li {
-      float: right;
-      margin-left: 30px;
-    }
-  }
-  #footerlogo {
-    @include footer-logo;
-  }
-  span {
-    color: $gray;
-    margin-right: 5px;
-    position: relative;
-  }
-
-}
-
-  // #toolbar { background-color: $black; }
-  // #toolbar {
-  //   margin: 0;
-  //  padding: 0px, 10%;
-  // bottom: 0;}
-  // #toolbar ul { margin: 0; padding: 0; list-style-type: none; }
-  // #toolbar ul li { display: inline; }
-  // #toolbar ul li a { text-decoration: none; }
-
 
 .content {
- // background: -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
- // background: -moz-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
- // background: -ms-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
- // background: -o-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
- // background: radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
- // background-size: 1px 10px, 10px 10px, 100% 100%;
- // background-position: 1px 1px, 0px 0px, center center;
  -webkit-border-radius: 10px 10px 10px 10px;
  -moz-border-radius: 10px 8px 8px 8px;
  border-radius: 10px 10px 10px 10px;
@@ -190,9 +135,9 @@ footer {
  -moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
  box-shadow: 0 6px 10px 0 rgba(0,0,0,.55);
   background-color: rgba(0,0,0,0.2);
-  margin: 0px, -60px; /* negative indent the amount of the padding to maintain the grid system */
-  // padding: 0px, 10%;
-  // top: 0;
+  margin: 10%, -60px; /* negative indent the amount of the padding to maintain the grid system */
+  padding: 10%, 10%;
+  top: 0;
 .navbar {
   overflow: hidden;
 }
@@ -206,6 +151,7 @@ footer {
   background-image: none;
   background-repeat: no-repeat;
   filter: none;
+  border-radius: none;
 }
 
  ul, li {
@@ -269,3 +215,44 @@ footer {
       width: 450px;
     }
   }
+
+/* footer */
+
+footer {
+  // position: relative;
+  height: 6en;
+  width: 100%;
+  // bottom: 0;
+  color: $white;
+  padding: 5px;
+  h2 {
+    padding: 10px auto;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      color: $grayLight;
+    }
+  }
+  ul {
+    float: right;
+    list-style: none;
+    margin-right: 10%;
+    li {
+      float: right;
+      margin-left: 30px;
+    }
+  }
+  #footerlogo {
+    @include footer-logo;
+  }
+  span {
+    color: $gray;
+    margin-right: 5px;
+    position: relative;
+  }
+
+}
+
+
