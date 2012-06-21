@@ -4,7 +4,7 @@ $iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
 @import "bootstrap";
 @import "bootstrap-responsive";
  body {
-  background: url('woodbg150.png') no-repeat center center fixed;
+  background: url('woodbg.png') repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -27,10 +27,10 @@ $document-color-yellow: #FFF08C;
 @mixin site-logo {
     color: $white;
     float: left;
-    font-size: 1.7em;
+    font-size: 2.7em;
     font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 1;
+    // letter-spacing: -1px;
+    line-height: 1.2;
     margin-left: 10%;
     padding-top: 10px;
     text-transform: uppercase;
@@ -79,21 +79,51 @@ $document-color-yellow: #FFF08C;
 
 
 header {
-  height: 40px;
+  height: 60px;
   #logo {
     @include site-logo;
   }
   a {
-    color: $white;
+    color: rgb(240, 240, 240);
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-origin: padding-box;
+    border-bottom-color: rgb(209, 209, 209);
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-left-color: rgb(209, 209, 209);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(209, 209, 209);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(209, 209, 209);
+    border-top-style: none;
+    border-top-width: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    text-rendering: optimizelegibility;
+    text-shadow: rgb(0, 0, 0) 0px 1px 2px;
+    overflow-x: visible;
+    overflow-y: visible;
+    line-height: 28px;
+    z-index: 3;
     &:hover {
+      display: block;
       color: $grayLight;
+      text-decoration: none;
+      background-color: none;
     }
   }
   ul {
     float: right;
     list-style: none;
     margin-right: 10%;
-              border-radius: 12px;
+    border-radius: 12px;
     li {
       float: right;
       margin-left: 30px;
@@ -222,7 +252,7 @@ footer {
   // position: relative;
   height: 6en;
   width: 100%;
-  // bottom: 0;
+  margin-top: 60px;
   color: $white;
   padding: 5px;
   h2 {
@@ -230,7 +260,10 @@ footer {
   }
   a {
     color: $white;
+    text-rendering: optimizelegibility;
+    text-shadow: rgb(0, 0, 0) 0px 1px 2px;
     text-decoration: none;
+    z-index: 13;
     &:hover {
       color: $grayLight;
     }
